@@ -1,0 +1,306 @@
+<!-- CS171 Project - Andrew Zhou and Lennon Bensaou - 11/13/16 -->
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CS171 Final Project</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div class="header">
+		<p id="title-1">The Forgotten Epidemic:</sup></p>
+		<p id="title-2">Exploring America's Misunderstood Health Crisis</p>
+	</div>
+
+	<div class="row">
+		<p class="top-title">
+			Mental Health in America
+		</p>
+		<p class="top-text">
+			Though mental health has been a concern since time immemorial, the topic is still subject to much stigma: even now the mentally ill are overlooked, undertreated, and forgotten. It is our hope that this site will offer insight and understanding into the mental health crisis in America. We would like to bring awareness to issues such as: the lifetime incidence of mental illness within the population; the breakdown of mental illness by population; the toll that mental illnesses take on their sufferers; the comorbid existence of multiple mental health conditions.<br><br>
+			We have taken our data from the <a href="http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/20240">Collaborative Psychiatric Epidemiology Surveys</a> (CPES), 2001-2003. The CPES data were compiled by taking data from three separate surveys&mdash;the National Comorbidity Survey Replication (NCS-R), the National Survey of American Life (NSAL), and the National Latino and Asian American Survey (NLAAS&mdash;and combining their results. The product is a detailed snapshot of mental health in America in the given period, the most comprehensive such snapshot we were able to locate. Of course, the mental health situation in America continues to evolve day-to-day, so we encourage viewers to seek out more information concerning the crisis. We have compiled a list of links for further reading below.<br><br>
+
+			Due to the nature of the dataset, we focus on five particular illnesses: <a href="https://psychiatry.org/patients-families/depression/what-is-depression?_ga=1.90240146.905042650.1481594486">Depression</a>, <a href="
+	https://psychiatry.org/patients-families/bipolar-disorders/what-are-bipolar-disorders">Bipolar Disorder</a>, <a href="https://psychiatry.org/patients-families/anxiety-disorders/what-are-anxiety-disorders
+">Anxiety Disorders</a>, <a href="https://psychiatry.org/patients-families/ptsd/what-is-ptsd
+">Post-Traumatic Stress Disorder</a> (PTSD), and <a href="https://psychiatry.org/patients-families/adhd/what-is-adhd
+">Attention Deficit Hyperactivity Disorder</a> (ADHD). Other disorders such as schizophrenia were not specifically covered in the survey. <br><br>
+
+			Please find our process book <a href="../files/process-book.pdf">here</a> and our initial proposal <a href="../files/proposal.pdf">here</a>.
+			<hr>
+		</p>
+	</div>
+
+	<div class="row">
+		<p class="quote">
+			“Grief is depression in proportion to circumstance; depression is grief out of proportion to circumstance.”<br>- Andrew Solomon, The Noonday Demon
+		</p>
+	</div>
+	<p><hr></p>
+
+
+	<div class="row">
+		<!-- Parent container for the visualization -->
+		<div class="col-md-6">
+			<div class="row">
+				<p class="left-title">
+					Select Demographic and Illness:
+				</p>
+				<form class="form-inline">
+					<div class="form-group">
+				    <label for="rankingType">Demographic:</label>
+				    <select class="form-control" id="demographic-variable">
+				    	<option value="race" selected="selected">Race</option>
+					    <option value="sex">Sex</option>
+						<option value="age">Age</option>
+					    <option value="environment">Environment</option>
+					    <option value="immigrant">Immigration</option>
+					    <option value="education">Education</option>
+					</select>
+				    </div>
+				</form>
+				<form class="form-inline">
+					<div class="form-group">
+				    <label for="rankingType">Illness:</label>
+				    <select class="form-control" id="illness-variable">
+				    	<option value="all" selected="selected">All</option>
+					    <option value="depression">Depression</option>
+						<option value="bipolar">Bipolar</option>
+					    <option value="anxiety">Anxiety</option>
+					    <option value="ptsd">PTSD</option>
+					    <option value="adhd">ADHD</option>
+					</select>
+				    </div>
+				</form>
+				<div class="checkbox">
+  					<label><input type="checkbox" id="y-axis-check" value="">Zoom Y-axis</label>
+				</div>	
+			</div>
+			<div class="row">
+				<p class="left-title">
+					Mental Health by Demographic
+				</p>
+				<p class="left-text">
+					See the chart to the right for a breakdown of incidence of mental illness by demographic. Use the two select boxes to the right&mdash;for demographic and illness&mdash;to compare how frequently individuals in particular demographic groups suffer from all (or any particular) mental illnesses. For the purposes of this presentation, mental illnesses are grouped into the categories of depression, bipolar disorder, anxiety, PTSD, and ADHD, as mentioned above. Note also that these statistics refer to lifetime incidence, and "All" illnesses refer to any of the five.  <br><br>
+					We hope to raise two points with this visualization on demographics: First, that mental illness is closely related to one’s circumstances. Second, the high prevalence of mental illness reveals that they are far less "abnormal" than they are portrayed as in society. <br><br>
+
+					The dotted red line on the graph indicates the general incidence of any particular illness (or all illnesses) in the population as a whole.
+
+				</p>
+			</div>
+
+		</div>
+		<div class="col-md-6">
+			<div id="bar-area-1"></div>
+		</div>
+
+	</div>
+	<div class="row">
+	
+	</div>
+	</div>
+
+	<p><hr></p>
+	<div class="row">
+		<p class="quote">
+			"Wherever I sat — on the deck of a ship or at a street café in Paris or Bangkok — I would be sitting under the same glass bell jar, stewing in my own sour air."<br> - Sylvia Plath, The Bell Jar
+		</p>
+	</div>
+	<p><hr></p>
+	<div class="row">
+		<!-- Parent container for the visualization -->
+		<div class="col-md-6">
+			<div class="row">li
+				<p class="left-title">
+					Select Illness:
+				</p>
+
+				<form class="form-inline">
+					<div class="form-group">
+				    <label for="rankingType">Illness:</label>
+				    <select class="form-control" id="illness-variable-2">
+				    	<option value="all" selected="selected">All</option>
+					    <option value="depression">Depression</option>
+						<option value="bipolar">Bipolar</option>
+					    <option value="anxiety">Anxiety</option>
+					    <option value="ptsd">PTSD</option>
+					    <option value="adhd">ADHD</option>
+					</select>
+				    </div>
+				</form>
+
+				<div class="checkbox">
+  					<label><input type="checkbox" id="x-axis-check" value="">Zoom X-axis</label>
+				</div>
+			</div>			
+
+			<div class="row">
+				<p class="left-title">
+					Mental Health by Association
+				</p>
+				<p class="left-text">
+					The chart to the rate demonstrates how particular traits and attributes are associated with mental illness. Note that it is very difficult to distinguish between a symptom of mental illness, a cause of mental illness, and a factor that is correlated but not causatively associated with mental illnesses, so we group these factors in the category of “Assocations.” <br><br>
+
+					Our chart shows the extent of the everyday effects of mental disorders, specifically the prevalence of attempted suicide, employment, marital status, and pharmaceutical treatment. The incidence of these associations in populations of individuals with specific illnesses can be viewed using the drop-down box above. The percentages can be compared with that of the non-mentally ill population: the green lines indicate the average incidence among those who do not suffer from a mental illness. <br><br>
+					
+					It may be noted that two of the associations are "positive": employment and marriages. Thus it would follow that mentally ill individuals generally have these traits at a rate lower than the non-ill population. Specifically, mentally ill individuals across the board have significantly marriage rates, and all ill populations save those with ADHD have lower employment rates. <br><br>
+
+					The other associations are "negative," and thus mentally ill individuals generally possess these qualities at a rate higher than the non-ill population. It may be noted that rates of attempted suicide are extremely high in ill populations (9.08%) compared to the non-ill population (0.96%). Additionally, bipolar patients rate particularly high in all "negative" categories, suggesting a significant degree of impairment.
+				</p>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div id="bar-area-2"></div>
+		</div>
+	</div>
+	</div>
+
+	<p><hr></p>
+	<div class="row">
+		<p class="quote">
+			"At the root of this dilemma is the way we view mental health in this country. Whether an illness affects your heart, your leg or your brain, it’s still an illness, and there should be no distinction.” <br>- Michelle Obama
+		</p>
+	</div>
+	<p><hr></p>
+	<div class="row">
+		<!-- Parent container for the visualization -->
+		<div class="col-md-6">
+		<div class="row">
+			<p class="left-title">
+				Comorbidity of Mental Illnesses
+			</p>
+			<p class="text-2">
+				The medical term "comorbidity" refers to a single individual suffering from more than one illness at the same time. Mental illnesses are, of course, closely related, and the individuals worst afflicted by these illnesses frequently suffer from more than one. <br><br>
+				The pie chart to the right indicates rates of comorbidity in both the general population and populations suffering from particular mental illnesses. The data initially pertain to the general population, but by changing the "Center Illness" the viewer may filter the data down to only individuals who suffer from a given illness. The chart will indicate the incidence of additional mental illnesses suffered within these populations.<br><br>
+
+				It may be noted that populations with bipolar disorder and PTSD are more likely to have additional illnesses than those with depression and anxiety; rates of comorbidity differ for different diseases.
+			</p>
+		</div>
+		<div class="row">
+			<p class="left-title">
+				Comorbidity Specifics
+			</p>
+			<p class="text-2">
+
+				The Diagnostic and Statistical Manual of Mental Disorders (DSM) is used to establish a particular diagnosis. Certain symptoms coincide across different illnesses. We hope to demonstrate through our "Subset Sunburst" chart to the right that mental illness depends our definitions of it. Exploring the amount of overlap can help demonstrate how the lines we set between the illnesses are not evident.<br><br>
+
+				The "Subset Sunburst" chart provides specifics on comorbidity statistics. Each ring around the center circle represents a particular illness, and each sector represents a specific subset. The data are hierarchically ordered in the given "Center Illness" population, allowing the viewer to observe the incidence of each particular subset. For example, selecting the disease in the inner ring alone indicates what percentage of the given population suffers from that disease alone. Selecting additional diseases will indicate what percentage of the given population suffers from those diseases (and do not suffer from preceding diseases in the hierarchy). <br><br>
+
+				Note that the illnesses are ordered. This is because the subset sunburst chart's nth layer only considers the first n illnesses in the ordering. For instance, the first ring's sector (outside of the center) indicates the percentage of people with the central illness who have the first additional illness. The second ring's two sectors indicate the percentage of people with the first additional illness and the second additional illness, and the percentage of people with the second additional illness and without the first additional  illness. The viewer may change the ordering of the illnesses so as to look at different combinations of illnesses.
+				<br><br>
+
+				The checkboxes allow the viewer to isolate a particular sector and see what percentage of individuals have that combination of illnesses. If boxes are checked, a sector will light up in the ring corresponding to the bottommost checked box. This sector indicates the percentage of people with the bottom illness, and with the specified combination of illnesses above this bottommost illness. Note that illnesses below the bottom checked box are not considered as they are later in the hierarchy, and therefore in rings outside of the highlighted sector.<br><br>
+
+				The viewer is encouraged to explore the subset sunburst chart for themselves by changing the central illness and checking boxes. Over time, how precisely the chart represents different subsets of illnesses will become more clear, and interesting trends in comorbidity will emerge.
+
+
+			</p>
+
+		</div>
+		</div>
+		<div class="col-md-6">
+		<div class="row">
+					<form class="form-inline">
+					<div class="form-group">
+				    <label for="rankingType">Center Illness:</label>
+				    <select class="form-control" id="center-variable">
+				    	<option value="none" selected="selected">None</option>
+					    <option value="depression">Depression</option>
+						<option value="bipolar">Bipolar</option>
+					    <option value="anxiety">Anxiety</option>
+					    <option value="ptsd">PTSD</option>
+					    <option value="adhd">ADHD</option>
+					</select>
+				    </div>
+
+				</div>
+				<div class="row">
+
+			<div id="pie-area"></div>
+				</div>
+
+		</div>		<div class="row">
+			<div id="burst-area"></div>
+			</div>
+
+				<div class="row">
+							<label id="order-text">
+					Order and Selection of Illnesses:
+				</label>
+				<!-- Simple List -->
+				<ul id="simpleList" class="list-group">
+				    <li class="list-group-item comorbidCheck" data-id="Depression" id="depressionCheck"><label class="checkbox-inline" ><input type="checkbox" class="comorbidBox" id="depressionBox" value="">Depression</label></li>
+				    <li class="list-group-item comorbidCheck" data-id="Bipolar"  id="bipolarCheck"><label class="checkbox-inline" ><input type="checkbox" class="comorbidBox" id="bipolarBox" value="">Bipolar</label></li>
+				    <li class="list-group-item comorbidCheck" data-id="Anxiety" id="anxietyCheck"><label class="checkbox-inline"><input type="checkbox" class="comorbidBox" id="anxietyBox" value="">Anxiety</label></li>
+				    <li class="list-group-item comorbidCheck" data-id="PTSD" id="ptsdCheck"><label class="checkbox-inline" ><input type="checkbox" class="comorbidBox" id="ptsdBox" value="">PTSD</label></li>
+				    <li class="list-group-item comorbidCheck" data-id="ADHD" id="adhdCheck"><label class="checkbox-inline" ><input type="checkbox" class="comorbidBox" id="adhdBox" value="">ADHD</label></li>
+				</ul>
+
+				<p id="comorbid-text"></p>
+				</div>
+
+
+	</div>
+	<div class="row">
+
+		<!-- Parent container for the visualization -->
+	<div class="col-md-6">
+		<div class="row">
+		
+
+		</div>
+		
+		
+		</div>
+
+	</div>
+
+	<p><hr></p>
+	<div class="row">
+		<p class="quote">
+			"I felt a Funeral, in my Brain, / And Mourners to and fro / Kept treading - treading - till it seemed / That Sense was breaking through -"<br>- Emily Dickinson, "I felt a Funeral, in my Brain"
+		</p>
+	</div>
+	<p><hr></p>
+
+
+	<div class="row">
+		<p class="source-text">
+		For further reading and mental health resources, please consult:<br>
+		<ul>
+		  <li><a href="https://www.mentalhealth.gov/">MentalHealth.gov</a><br></li>
+		  <li>The <a href="https://psychiatry.org/">American Psychiatric Association<a><br></li>
+		  <li>The <a href="http://www.nami.org/">National Alliance on Mental Illness</a><br></li>
+		  <li>The <a href="https://www.samhsa.gov/">Substance Abuse and Mental Health Services Administration</a><br></li>
+		  <li><a href="http://www.mentalhealthamerica.net">Mental Health America</a><br></li>
+		</ul>
+		
+		</p>
+		<p class="source-text">Data from:<br>
+				The <a href="http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/20240">Collaborative Psychiatric Epidemiology Surveys</a>, 2001-2003.<br>
+				Header image sourced from <a href="https://mackinstitute.wharton.upenn.edu/wp-content/uploads/2015/08/mental-health.jpg">https://mackinstitute.wharton.upenn.edu/wp-content/uploads/2015/08/mental-health.jpg</a>.<br><br>
+				Site implementation and design by Andrew Zhou and Lennon Bensaou.
+		</p>
+	</div>
+
+	<!-- Load JS libraries -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/queue.min.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/d3.tip.js"></script>
+	<script src="js/Sortable.js"></script>
+	<!-- own code -->
+	<script src="js/helper.js"></script>
+	<script src="js/vis-bar.js"></script>
+	<script src="js/vis-bar-2.js"></script>
+	<script src="js/vis-burst.js"></script>
+	<script src="js/vis-pie.js"></script>
+	<script src="js/main.js"></script>	
+</body>
+</html>
