@@ -1,7 +1,6 @@
 /*
-* Helper functions for the visualizations
-*
-*/
+ * Helper functions for the visualizations
+ */
 formatDemo = function(demo) {
     if (demo == "immigrant") {
         return "Immigration Status";

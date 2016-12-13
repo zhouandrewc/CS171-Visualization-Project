@@ -1,11 +1,5 @@
-
-
 /*
- * BarChart - Object constructor function
- * @param _parentElement    -- the HTML element in which to draw the bar charts
- * @param _data                     -- the dataset 
- *
- * Unimplemented.
+ * BarChart
  */
 
 BarChart = function(_parentElement, _demoSelectorElement, _illnessSelectorElement, _checkboxSelectorElement, _data){

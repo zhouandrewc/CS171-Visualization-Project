@@ -1,12 +1,6 @@
-
-
 /*
- * BarChart - Object constructor function
- * @param _parentElement    -- the HTML element in which to draw the bar charts
- * @param _centerSelector -- the selector for the center
- * @param _data -- the dataset 
- *
- */
+* BurstChart
+*/
 
 BurstChart = function(_parentElement, _centerSelector, _data){
     this.parentElement = _parentElement;
@@ -72,19 +66,7 @@ BurstChart.prototype.initVis = function(){
     });
     vis.updateVis();
 
-    // Add the chart title
-    /*vis.svg.append("text")
-        .attr("class", "bar-chart-title")
-        .text("Generic Burst Chart")
-        .attr("transform", "translate(10,-7)");*/
-
-    // Set the listener for the select box and bind vis as this in updateChoropleth so 
-    // it works properly
     d3.selectAll(".comorbidBox").on("change", vis.handleCheckboxes.bind(vis));
-    //d3.select("#" + vis.demoSelectorElement).on("change", vis.wrangleData.bind(vis));
-    //d3.select("#" + vis.illnessSelectorElement).on("change", vis.wrangleData.bind(vis));
-    //d3.select("#" + vis.checkboxSelectorElement).on("change", vis.wrangleData.bind(vis));
-    // (Filter, aggregate, modify data)
     vis.wrangleData();
 }
 

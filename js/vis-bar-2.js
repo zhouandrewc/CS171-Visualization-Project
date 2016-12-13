@@ -1,10 +1,5 @@
-
-
 /*
- * BarChart - Object constructor function
- * @param _parentElement    -- the HTML element in which to draw the bar charts
- * @param _data                     -- the dataset 'household characteristics'
- * @param _config                   -- variable from the dataset (e.g. 'electricity') and title for each bar chart
+ * BarChart2
  */
 
 BarChart2 = function(_parentElement, _illnessSelectorElement, _checkboxSelectorElement, _data){

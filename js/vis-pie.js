@@ -1,10 +1,5 @@
 /*
- * Choropleth - Object constructor function
- * @param _parentElement    -- the HTML element in which to draw the bar choropleth
- *
- * Template for pie chart taken from https://bl.ocks.org/mbostock/3887235
- *
- * CS171 Project - Andrew Zhou and Lennon Bensaou
+ * PieChart
  */
 
 PieChart = function(_parentElement, _centerSelector, _data) {
